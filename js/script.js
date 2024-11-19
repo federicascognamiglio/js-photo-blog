@@ -9,7 +9,7 @@ const printPost = () => {
             <div class="col">
                 <div class="photo-polaroid">
                     <div class="photo">
-                        <img src="${curItem.thumbnailUrl}">
+                        <img src="${curItem.url}">
                     </div>
                     <div class="caption">${curItem.title}</div>
                 </div>
@@ -18,7 +18,7 @@ const printPost = () => {
 }
 
 // ESECUZIONE LOGICA
-axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6", {timeout: 5000}).then((resp) => {
+axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6", {timeout: 6000}).then((resp) => {
     dataArray = resp.data;
     console.log(dataArray);
     printPost()
