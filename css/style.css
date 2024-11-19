@@ -52,6 +52,7 @@ body {
 
 .photo {
     padding-bottom: 20px;
+    object-fit: cover;
 }
 
 .caption {
