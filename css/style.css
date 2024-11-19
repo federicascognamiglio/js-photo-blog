@@ -1,0 +1,68 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* COMMON */
+/* Layout */
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Font */
+body {
+    background-image: url("../img/cork.png");
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    font-family: "Edu TAS Beginner", cursive;
+    font-size: 2rem;
+    padding: 20px 0;
+    background-image: url("../img/wall.png");
+}
+
+/* MAIN */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 50px;
+}
+
+.col {
+    width: calc((100% - 20px) / 3);
+    position: relative;
+}
+
+.photo-polaroid {
+    background-color: #ffffff;
+    padding: 15px 15px 20px 15px;
+}
+
+.photo {
+    padding-bottom: 20px;
+}
+
+.caption {
+    font-family: "Edu TAS Beginner", cursive;
+}
+
+.photo-polaroid::after {
+    content: url(../img/pin.svg);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
