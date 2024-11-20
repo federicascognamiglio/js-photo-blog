@@ -5,7 +5,6 @@ const closeBtn = document.querySelector(".close-btn");
 const overlayImg = document.querySelector(".overlay-img");
 let dataArray = [];
 
-
 // FUNZIONI
 // Funzione che stampa Post
 const printPost = () => {
@@ -25,10 +24,8 @@ const printPost = () => {
 // Funzione che mostra Overlay
 const showOverlay = (clickElem) => {
     const clickedPostId = clickElem.dataset.postId;
-    console.log(clickedPostId);
-    const imgToShowElem = dataArray.find((curItem) => curItem.id === clickedPostId);
-    console.log(imgToShowElem);
-    // overlayImg.innerHTML = `<img src="${imgToShowElem.url}">`
+    const imgToShowElem = dataArray.find((curItem) => curItem.id == clickedPostId);
+    overlayImg.innerHTML = `<img src="${imgToShowElem.url}">`
     overlayElem.classList.remove("d-none");
     overlayElem.classList.add("d-flex");
 };
@@ -50,10 +47,8 @@ const addEvent = () => {
 // ESECUZIONE LOGICA
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6", { timeout: 6000 }).then((resp) => {
     dataArray = resp.data;
-    console.log(dataArray);
     printPost()
     addEvent()
 })
 
 closeBtn.addEventListener("click", hideOverlay);
-
