@@ -10,6 +10,16 @@ img {
     display: block;
 }
 
+/* UTILITIES */
+/* Display */
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
 /* COMMON */
 /* Layout */
 .container {
@@ -35,7 +45,6 @@ body {
 /* MAIN */
 /* Posts */
 .row {
-    display: flex;
     flex-wrap: wrap;
     gap: 20px;
     padding: 50px;
@@ -50,6 +59,7 @@ body {
 
 .photo-polaroid {
     padding: 15px 15px 40px 15px;
+    cursor: pointer;
 }
 
 .photo {
@@ -72,7 +82,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    z-index: 9999;
     flex-direction: column;
     row-gap: 20px;
     justify-content: center;
@@ -86,6 +96,7 @@ body {
 .btn {
     display: inline-block;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 /* RESPONSIVE LAYOUT */
