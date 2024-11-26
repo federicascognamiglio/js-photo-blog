@@ -64,6 +64,7 @@ body {
 
 .photo {
     padding-bottom: 20px;
+    position: relative;
 }
 
 .photo-polaroid::after {
@@ -72,6 +73,13 @@ body {
     top: 0;
     left: 50%;
     transform: translate(-50%, -20%);
+}
+
+.fa-trash {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #ffffff;
 }
 
 /* Overlay */
@@ -99,7 +107,7 @@ body {
     cursor: pointer;
 }
 
-/* HOVER */
+/* HOVER STATES*/
 .col:hover {
     transform: rotate(10deg) scale(1.1);
     z-index: 999;
